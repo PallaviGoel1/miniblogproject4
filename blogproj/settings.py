@@ -31,8 +31,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#ALLOWED_HOSTS = ['8000-pallavigoel-miniblogpro-6sksdec7tz8.ws-eu106.gitpod.io']
-ALLOWED_HOSTS = ['miniblog23-f66148cb72c8.herokuapp.com'] 
+ALLOWED_HOSTS = ['8000-pallavigoel-miniblogpro-6sksdec7tz8.ws-eu106.gitpod.io']
+#ALLOWED_HOSTS = ['miniblog23-f66148cb72c8.herokuapp.com'] 
 #if output on heroku then you that link otherwise above link
 
 
@@ -47,7 +47,9 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'django_summernote',
     'miniblog',
+
 ]
 
 MIDDLEWARE = [
@@ -136,7 +138,8 @@ STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATICFILES_ROOTS = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
-DEFAULT_FILE_STORAGE = 'cloudinary-storage.storage.MediaCloudinaryStorage'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
