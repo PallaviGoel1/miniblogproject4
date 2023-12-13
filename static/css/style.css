@@ -1,6 +1,6 @@
 body {
-    /*background-color: #F9FAFC;*/
-    background-image: url("/media/images/Background-clouds.jpg");
+    background-color: #e7e2e5;
+    /*background-image: url("/media/images/Background-clouds.jpg");*/
 }
 
 .brand {
@@ -11,7 +11,7 @@ body {
 }
 
 .red-o {
-    color: #dde81052;
+    color: #da10e8;
 }
 
 .thin {
@@ -19,18 +19,20 @@ body {
 }
 
 .light-bg {
-    background-color: #fff;
+    background-color: #db7878;
 }
 
 .dark-bg {
-    background-color: #113b68;
+    background-color: #01254b;
 }
 
 .main-bg {
-    background-color: #b2c7f2;
+    background-color: #dcd2c6f0;
+    /*background-image: url("/media/images/Background-clouds.jpg");
+    background-repeat: no-repeat;*/
 }
 
-.card {
+.blog {
     border: none;
     background-color: transparent;
 }
@@ -48,9 +50,10 @@ body {
 }
 
 .author {
-    color: white;
+    color: rgb(33, 17, 17);
     margin: 4px;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .masthead {
@@ -94,7 +97,7 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: #755dec;
+    color: #cd4bbc;
 }
 
 .post-title {
@@ -125,7 +128,7 @@ body {
 
 .link:hover,
 .link:active {
-    color: #445261;
+    color: #46033c;
     text-decoration: underline;
 }
 
@@ -137,7 +140,7 @@ body {
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
+    color: #e12997;
     background: transparent;
     border: none;
 }
