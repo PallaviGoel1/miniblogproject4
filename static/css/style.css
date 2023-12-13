@@ -1,5 +1,6 @@
 body {
-    background-color: #F9FAFC;
+    /*background-color: #F9FAFC;*/
+    background-image: url("/media/images/Background-clouds.jpg");
 }
 
 .brand {
@@ -10,7 +11,7 @@ body {
 }
 
 .red-o {
-    color: #E84610;
+    color: #dde81052;
 }
 
 .thin {
@@ -22,11 +23,11 @@ body {
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: #113b68;
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: #b2c7f2;
 }
 
 .card {
@@ -93,7 +94,7 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: #755dec;
 }
 
 .post-title {

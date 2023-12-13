@@ -15,7 +15,7 @@
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="/media/images/blog.jpg">
+                                    src="https://www.bertelsmann-stiftung.de/fileadmin/files/_processed_/a/c/csm_Fotolia_64336912_X_Original_41023_d2446515ba.jpg">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
@@ -23,7 +23,7 @@
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="post-link">
+                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
@@ -33,6 +33,7 @@
                         </div>
                     </div>
                 </div>
+                <!--show blog in first page if divisible 3 means 3 blog in a line-->
                 {% if forloop.counter|divisibleby:3 %}
             </div>
             <div class="row">
