@@ -10,30 +10,29 @@
             <div class="row">
                 {% for post in post_list %}
                 <div class="col-md-4">
-                    <div class="blog mb-4">
-                        <div class="blog">
+                    <div class="card mb-4">
+                        <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="blog"
+                                <img class="card-img-top"
                                     src="https://www.bertelsmann-stiftung.de/fileadmin/files/_processed_/a/c/csm_Fotolia_64336912_X_Original_41023_d2446515ba.jpg">
                                 {% else %}
-                                <img class="blog" src=" {{ post.featured_image.url }}">
+                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
                             </div>
-                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                <h2 class="blog">{{ post.title }}</h2>
-                                <p class="blog">{{ post.excerpt }}</p>
+                            <a href="{% url 'post_detail' post.slug  %}" class="post-link">
+                                <h2 class="card-title">{{ post.title }}</h2>
+                                <p class="card-text">{{ post.excerpt }}</p>
                             </a>
                             <hr />
-                            <p class="blog text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
+                            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
                                 {{ post.number_of_likes }}</p>
                         </div>
                     </div>
                 </div>
-                <!--show blog in first page if divisible 3 means 3 blog in a line-->
                 {% if forloop.counter|divisibleby:3 %}
             </div>
             <div class="row">

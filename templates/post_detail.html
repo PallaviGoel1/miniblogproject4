@@ -4,18 +4,17 @@
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
-                <!-- Post title use h1 -->
-                <h1 class="post-title">{{ post.title}}
-                </h1>
-                <!-- Post author name-->
-                <p class="post-subtitle"> {{ post.author}} | {{ post.created_on }} </p>
+                <!-- Post title goes in these h1 tags -->
+                <h1 class="post-title">{{ post.title }}</h1>
+                <!-- Post author goes before the | the post's created date goes after -->
+                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- image use src link-->
+                <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
                 <img src="https://www.bertelsmann-stiftung.de/fileadmin/files/_processed_/a/c/csm_Fotolia_64336912_X_Original_41023_d2446515ba.jpg" width="100%">
                 {% else %}
-                <img src="{{ post.featured_image.url }}" width="100%">
+                <img src=" {{ post.featured_image.url }}" width="100%">
                 {% endif %}
             </div>
         </div>
@@ -24,22 +23,24 @@
 
 <div class="container">
     <div class="row">
-        <div class="col blog mb-4  mt-3 left  top">
-            <div class="blog">
-                <!-- Post inside the card-text & template tags -->
-                <p class="blog ">{{ post.content | safe }} </p>
+        <div class="col card mb-4  mt-3 left  top">
+            <div class="card-body">
+                <!-- The post content goes inside the card-text. -->
+                <!-- Use the | safe filter inside the template tags -->
+                <p class="card-text ">
+                    {{ post.content | safe }}
+                </p>
                 <div class="row">
 
                     <div class="col-1">
-                        <!--numbers of likes -->
-                        <strong class="text-secondary"><i class="far fa-heart"></i>{{ post.number_of_likes }} </strong>
+                        <!-- The number of likes goes before the closing strong tag -->
+                        <strong class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }} </strong>
                     </div>
                     <div class="col-1">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
-                            <!-- total_comments-->
-                            {{ total_comments }}
-                        </strong>
+                            <!-- Our total_comments variable goes before the closing strong tag -->
+                            {{ total_comments }}</strong>
                         {% endwith %}
                     </div>
                 </div>
@@ -52,30 +53,30 @@
         </div>
     </div>
     <div class="row">
-        <div class="col blog mb-4  mt-3 ">
+        <div class="col-md-8 card mb-4  mt-3 ">
             <h3>Comments:</h3>
-            <div class="blog-body">
-                <!-- for loop inside for comments -->
+            <div class="card-body">
+                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
-                        <!-- commenter person name here -->
+                        <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
                         {{ comment.name }}
                         <span class=" text-muted font-weight-normal">
-                            <!-- comment write date here  -->
+                            <!-- The comment's created date goes here -->
                             {{ comment.created_on }}
                         </span> wrote:
                     </p>
-                    <!-- body of the comment -->
+                    <!-- The body of the comment goes before the | -->
                     {{ comment.body | linebreaks }}
                 </div>
-                <!-- for loop end -->
+                <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>
-        <div class="col-md-4 blog mb-4  mt-3 ">
-            <div class="blog-body">
-                <!-- later -->
+        <div class="col-md-4 card mb-4  mt-3 ">
+            <div class="card-body">
+                <!-- For later -->
             </div>
         </div>
     </div>
