@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-pallavigoel-miniblogpro-6sksdec7tz8.ws-eu106.gitpod.io']
+ALLOWED_HOSTS = ['8000-pallavigoel-miniblogpro-6sksdec7tz8.ws-eu107.gitpod.io']
 #ALLOWED_HOSTS = ['miniblog23-f66148cb72c8.herokuapp.com'] 
 #if output on heroku then you that link otherwise above link
 

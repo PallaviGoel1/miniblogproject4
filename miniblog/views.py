@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Post
+from .models1 import UserPost
 
 # Create your views here.
 class PostList(generic.ListView):
