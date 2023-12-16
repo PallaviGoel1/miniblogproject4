@@ -1,5 +1,5 @@
 from django.db import models1
-from django.contrib.auth.models import User, admin
+from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
